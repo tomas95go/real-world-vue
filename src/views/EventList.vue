@@ -7,6 +7,7 @@
 <script>
 // @ is an alias to /src
 import EventCard from "@/components/EventCard.vue";
+import EventService from "@/services/EventService.js";
 
 export default {
   name: 'EventList',
@@ -15,18 +16,13 @@ export default {
   },
   data() {
     return {
-      events: [{
-        id: 1,
-        title: 'My new event!',
-        time: '12:00',
-        place: 'Flaw City',
-        date: '29/04/2021'
-      },{        id: 2,
-        title: 'Second event!',
-        time: '13:00',
-        place: 'Flaw City',
-        date: '30/04/2021'}]
+      events: null
     }
+  },
+  created(){
+    EventService.getEvents()
+    .then(response => this.events = response.data)
+    .catch(error => console.log(error))
   }
 }
 </script>
