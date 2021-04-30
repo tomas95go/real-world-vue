@@ -2,7 +2,7 @@
   <section class="section">
     <div class="container">
       <div class="columns is-centered">
-        <router-link class="button is-outlined is-link mr-1" to="/"> Home </router-link>
+        <router-link class="button is-outlined is-link mr-1" to="/"> Event List </router-link>
         <router-link class="button is-outlined is-link ml-1" to="/about"> About </router-link>
       </div>
       <div class="columns is-centered">
