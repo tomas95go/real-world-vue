@@ -1,4 +1,5 @@
 <template>
+  <router-link :to="{ name: 'EventDetails', params: {id: event.id} }">
     <div class="card mb-5">
       <div class="card-header has-background-primary">
         <h3 class="card-header-title is-centered has-text-white"> {{ event.title }} </h3>
@@ -9,6 +10,7 @@
         </div>
       </div>
     </div>
+  </router-link>
 </template>
 
 <script>
